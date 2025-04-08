@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>San Leonardo - Battesimi 1778-1802</title>
+  
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/turn.js"></script>
+  
+  <style type="text/css">
+  html, body {
+ background-color: #e6fbf4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        }
+  #foto {
+    height: 94vh;
+	aspect-ratio: 1.41;
+	overflow: hidden;
+  }
+  #foto .turn-page{
+    background-color: #CCCCCC;
+    background-size: 100% 100%;
+  }
+  /* Stile per la barra di navigazione */
+        #navigation {
+            width: 98%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: -40px;
+            background: #d3d3d3;
+            padding: 5px 10px;
+            border-radius: 20px;
+            gap: 10px;
+        }	
+        #page-slider {
+            flex-grow: 1;
+            width: 100%;
+            -webkit-appearance: none;
+            height: 5px;
+            background: #555;
+            border-radius: 5px;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+  </style>
+  
+</head>
+<body>
+
+<div id="book-container">
+<div id="foto">
+  <!-- APPLICO LE IMMAGINI COME SFONDO DELLE PAGINE DEL FLIPBOOK -->
+  <div class="page" style="background-image:url(img_LEO_BAT1/001b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/002a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/002b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/003a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/003b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/004a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/004b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/005a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/005b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/006a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/006b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/007a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/007b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/008a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/008b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/009a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/009b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/010a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/010b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/011a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/011b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/012a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/012b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/013a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/013b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/014a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/014b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/015a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/015b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/016a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/016b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/017a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/017b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/018a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/018b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/019a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/019b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/020a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/020b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/021a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/021b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/022a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/022b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/023a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/023b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/024a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/024b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/025a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/025b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/026a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/026b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/027a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/027b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/028a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/028b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/029a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/029b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/030a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/030b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/031a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/031b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/032a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/032b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/033a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/033b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/034a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/034b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/035a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/035b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/036a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/036b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/037a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/037b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/038a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/038b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/039a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/039b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/040a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/040b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/041a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/041b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/042a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/042b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/043a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/043b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/044a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/044b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/045a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/045b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/046a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/046b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/047a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/047b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/048a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/048b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/049a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/049b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/050a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/050b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/051a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/051b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/052a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/052b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/053a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/053b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/054a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/054b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/055a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/055b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/056a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/056b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/057a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/057b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/058a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/058b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/059a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/059b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/060a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/060b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/061a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/061b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/062a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/062b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/063a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/063b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/064a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/064b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/065a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/065b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/066a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/066b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/067a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/067b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/068a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/068b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/069a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/069b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/070a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/070b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/071a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/071b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/072a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/072b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/073a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/073b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/074a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/074b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/075a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/075b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/076a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/076b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/077a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/077b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/078a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/078b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/079a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/079b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/080a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/080b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/081a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/081b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/082a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/082b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/083a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/083b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/084a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/084b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/085a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/085b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/086a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/086b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/087a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/087b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/088a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/088b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/089a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/089b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/090a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/090b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/091a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/091b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/092a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/092b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/093a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/093b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/094a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/094b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/095a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/095b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/096a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/096b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/097a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/097b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/098a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/098b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/099a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/099b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/100a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/100b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/101a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/101b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/102a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/102b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/103a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/103b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/104a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/104b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/105a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/105b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/106a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/106b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/107a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/107b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/108a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/108b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/109a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/109b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/110a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/110b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/111a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/111b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/112a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/112b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/113a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/113b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/114a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/114b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/115a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/115b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/116a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/116b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/117a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/117b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/118a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/118b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/119a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/119b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/120a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/120b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/121a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/121b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/122a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/122b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/123a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/123b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/124a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/124b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/125a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/125b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/126a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/126b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/127a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/127b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/128a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/128b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/129a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/129b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/130a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/130b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/131a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/131b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/132a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/132b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/133a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/133b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/134a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/134b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/135a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/135b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/136a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/136b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/137a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/137b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/138a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/138b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/139a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/139b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/140a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/140b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/141a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/141b.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/142a.jpg);"></div>
+  <div class="page" style="background-image:url(img_LEO_BAT1/142b.jpg);"></div>
+
+
+</div>
+<div id="navigation">
+  <input type="range" id="page-slider" min="1">
+</div>
+</div>
+
+ <script type="text/javascript">
+
+  $(function() {
+ 
+      let totalPages = $('#foto .page').length;
+      let sliderMax = Math.trunc(((totalPages - 2) / 2)) + 2;
+      $("#page-slider").attr("max", sliderMax);
+	  let tasti = true;
+
+  
+    // attivo l'effetto
+    $('#foto').turn({
+      display: 'double',
+	  autoCenter: true,
+      duration: 1000, 
+	  when: {
+             turning: function(event, page, view) {
+		     let sliderValue = Math.trunc(page / 2) + 1;
+             $("#page-slider").val(sliderValue);
+               }
+			}   
+    });
+
+	
+	// Cambia pagina con lo slider
+			$("#page-slider").on("input", function() {
+			    tasti = false;
+                let newStep = parseInt($(this).val());
+                let targetPage = newStep === 1 ? 1 : (newStep * 2) - 2;
+				console.log("newStep: ", newStep);
+				console.log("targetPage: ", targetPage);
+				console.log("tasti slider: ", tasti);
+                $("#foto").turn("page", targetPage);			
+            });
+ 
+ 
+    // imposto la navigazione anche da tastiera
+     $(window).bind('keydown', function(e){
+	 if (tasti === true)
+	 {
+      if (e.keyCode == 37) $('#foto').turn('previous'); 
+      else if (e.keyCode == 39) $('#foto').turn('next'); 
+	 }
+    });
+
+	
+	// adatto le immagini in funzione della dimensione della finestra
+	$(window).resize(function() {
+	 let newHeight = Math.trunc($(window).height() * 0.94);
+	 let newWidth = Math.trunc(newHeight * 1.41);    
+     $("#foto").turn("size", newWidth, newHeight);
+	 $("#foto").turn("resize");
+    });
+    
+  });
+  </script>
+
+</body>
+</html>
